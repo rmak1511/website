@@ -29,6 +29,9 @@ jobs:
         # copy of the app shell there lets the client router resolve
         # deep links like /website/rentals.
       - run: cp dist/index.html dist/404.html
+        # Real per-page copies so /rentals, /services and /about answer
+        # 200 (not the 404 fallback) and can be indexed.
+      - run: for p in rentals services about; do mkdir -p dist/$p && cp dist/index.html dist/$p/index.html; done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
