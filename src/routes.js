@@ -2,11 +2,11 @@ import { pages } from "./data/siteContent";
 
 export const defaultPageId = "home";
 
-// The site is deployed under a repo prefix on GitHub Pages
-// (base: "/website/" in vite.config.js). Routes are matched on
-// the logical path ("/", "/about"), so the prefix is stripped on read
-// and re-applied on navigation. Locally the base is "/" and both
-// helpers are no-ops.
+// Routes are matched on the logical path ("/", "/about"). If the site is
+// ever served under a path prefix (vite.config.js `base`, e.g. a GitHub
+// Pages project URL), the prefix is stripped on read and re-applied on
+// navigation. With the custom domain the base is "/" and both helpers
+// are no-ops.
 export const basePath = import.meta.env.BASE_URL.replace(/\/+$/, "");
 
 export function stripBase(pathname) {

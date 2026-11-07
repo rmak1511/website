@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rmak1511.github.io/website/sitemap.xml
+Sitemap: https://tuumest.net/sitemap.xml

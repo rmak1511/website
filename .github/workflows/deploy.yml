@@ -27,7 +27,7 @@ jobs:
       - run: npm run build
         # SPA fallback: Pages serves 404.html for unknown paths, so a
         # copy of the app shell there lets the client router resolve
-        # deep links like /website/rentals.
+        # deep links like /rentals.
       - run: cp dist/index.html dist/404.html
         # Real per-page copies so /rentals, /services and /about answer
         # 200 (not the 404 fallback) and can be indexed.
